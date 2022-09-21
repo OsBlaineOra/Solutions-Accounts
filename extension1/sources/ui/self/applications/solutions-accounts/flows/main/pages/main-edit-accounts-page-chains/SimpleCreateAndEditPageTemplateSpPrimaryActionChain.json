@@ -1,10 +1,12 @@
 {
   "description": "",
-  "root": "callChain",
+  "root": "callChainSaveAccountsChain",
   "actions": {
-    "callChain": {
+    "callChainSaveAccountsChain": {
       "module": "vb/action/builtin/callChainAction",
-      "parameters": {}
+      "parameters": {
+        "id": "saveAccountsChain"
+      }
     }
   },
   "variables": {}
