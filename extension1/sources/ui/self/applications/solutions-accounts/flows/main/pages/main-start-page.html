@@ -14,10 +14,13 @@
     <oj-sp-collection-container>
       <oj-table scroll-policy-options.scroller="html" scroll-policy="loadMoreOnScroll"
         data="[[$variables.accountsListSDP]]"
-        columns='[{"headerText":"Organization Name","field":"OrganizationName","sortable":"disabled"},{"headerText":"Chief Executive Name","field":"CEOName","sortable":"disabled"},{"headerText":"Revenue","field":"CurrentFiscalYearPotentialRevenueAmount","sortable":"disabled"},{"headerText":"Next Fiscal Year&apos;s Potential Revenue","field":"NextFiscalYearPotentialRevenueAmount","sortable":"disabled"},{"headerText":"Edit","field":"","template":"Edit"},{"headerText":"Info","field":""}]'
+        columns='[{"headerText":"Organization Name","field":"OrganizationName","sortable":"disabled"},{"headerText":"Chief Executive Name","field":"CEOName","sortable":"disabled"},{"headerText":"Revenue","field":"CurrentFiscalYearPotentialRevenueAmount","sortable":"disabled"},{"headerText":"Next Fiscal Year&apos;s Potential Revenue","field":"NextFiscalYearPotentialRevenueAmount","sortable":"disabled"},{"headerText":"Edit","field":"","template":"Edit"},{"headerText":"Info","field":"","template":"Info"}]'
         id="oj-table--1606100036-1" selection-mode.row="single" selection-mode.column="single"
         on-first-selected-row-changed="[[ $listeners.oj_table_1606100036_1SelectionChanged ]]">
         <template slot="Edit">
+          <oj-button label="Button"></oj-button>
+        </template>
+        <template slot="Info">
           <oj-button label="Button"></oj-button>
         </template>
       </oj-table>
