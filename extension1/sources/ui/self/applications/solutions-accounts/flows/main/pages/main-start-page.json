@@ -1,7 +1,11 @@
 {
   "title": "",
   "description": "",
-  "variables": {},
+  "variables": {
+    "searchString": {
+      "type": "string"
+    }
+  },
   "metadata": {},
   "types": {},
   "eventListeners": {},
