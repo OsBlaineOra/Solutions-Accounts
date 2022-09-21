@@ -33,7 +33,7 @@
     <oj-sp-foldout-panel panel-title="[[ $page.variables.panelTwoTitle]]" class="profile-panel">
       <!-- below div is default slot for the content of the first foldout panel -->
       <div>
-        <oj-form-layout>
+        <oj-form-layout label-edge="start">
           <oj-input-text value="[[ $variables.accounts.AddressLine1 ]]" readonly="true" label-hint="Address Line 1"
             validators='[{"type":"length","options":{"max":"240"}}]'></oj-input-text>
           <oj-input-text value="[[ $variables.accounts.AddressLine2 ]]" readonly="true" label-hint="Address Line 2"
