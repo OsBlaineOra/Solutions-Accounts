@@ -1,7 +1,12 @@
 {
   "description": "",
-  "root": "",
-  "actions": {},
+  "root": "callChain",
+  "actions": {
+    "callChain": {
+      "module": "vb/action/builtin/callChainAction",
+      "parameters": {}
+    }
+  },
   "variables": {
     "key": {
       "required": true,
