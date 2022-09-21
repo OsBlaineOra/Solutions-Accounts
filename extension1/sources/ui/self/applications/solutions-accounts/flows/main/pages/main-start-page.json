@@ -5,5 +5,11 @@
   "metadata": {},
   "types": {},
   "eventListeners": {},
-  "imports": {}
+  "imports": {
+    "components": {
+      "oj-sp-welcome-page": {
+        "path": "oj-sp/welcome-page/loader"
+      }
+    }
+  }
 }
