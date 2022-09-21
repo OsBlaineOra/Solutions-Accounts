@@ -1,0 +1,36 @@
+{
+  "root": "loadAccounts",
+  "actions": {
+    "loadAccounts": {
+      "module": "vb/action/builtin/restAction",
+      "parameters": {
+        "endpoint": "site_SolutionsAccounts:crmRest/get_accounts",
+        "uriParams": {
+          "accounts_Id": "[[ $page.variables.accountsId ]]"
+        },
+        "responseType": "page:getAccountsResponse"
+      },
+      "outcomes": {
+        "success": "assignPayload",
+        "failure": "fireErrorNotification"
+      }
+    },
+    "assignPayload": {
+      "module": "vb/action/builtin/assignVariablesAction",
+      "parameters": {
+        "$page.variables.accounts": {
+          "source": "[[ $chain.results.loadAccounts.body ]]"
+        }
+      }
+    },
+    "fireErrorNotification": {
+      "module": "vb/action/builtin/fireNotificationEventAction",
+      "parameters": {
+        "summary": "Could not load data",
+        "message": "[[ 'Could not load data: status ' + $chain.results.loadAccounts.status ]]",
+        "type": "error",
+        "displayMode": "persist"
+      }
+    }
+  }
+}

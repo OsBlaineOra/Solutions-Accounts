@@ -1,0 +1,34 @@
+<div class="oj-flex">
+  <h1 class="oj-flex-item oj-sm-12 oj-md-12">accounts Detail</h1>
+</div>
+<div class="oj-flex">
+  <div class="oj-flex-item oj-sm-12 oj-md-12">
+    <oj-form-layout label-edge="start">
+      <oj-input-text value="[[ $variables.accounts.OrganizationName ]]" readonly="true" label-hint="Organization Name"
+        validators='[{"type":"length","options":{"max":"360"}}]'></oj-input-text>
+      <oj-input-text value="[[ $variables.accounts.CEOName ]]" readonly="true" label-hint="Chief Executive Name"
+        validators='[{"type":"length","options":{"max":"240"}}]'></oj-input-text>
+      <oj-input-text value="[[ $variables.accounts.OwnerName ]]" readonly="true" label-hint="Owner"
+        validators='[{"type":"length","options":{"max":"360"}}]'></oj-input-text>
+      <oj-input-text value="[[ $variables.accounts.AddressLine1 ]]" readonly="true" label-hint="Address Line 1"
+        validators='[{"type":"length","options":{"max":"240"}}]'></oj-input-text>
+      <oj-input-text value="[[ $variables.accounts.AddressLine2 ]]" readonly="true" label-hint="Address Line 2"
+        validators='[{"type":"length","options":{"max":"240"}}]'></oj-input-text>
+      <oj-input-text value="[[ $variables.accounts.AddressLine3 ]]" readonly="true" label-hint="Address Line 3"
+        validators='[{"type":"length","options":{"max":"240"}}]'></oj-input-text>
+      <oj-input-text value="[[ $variables.accounts.AddressLine4 ]]" readonly="true" label-hint="Address Line 4"
+        validators='[{"type":"length","options":{"max":"240"}}]'></oj-input-text>
+      <oj-input-text value="[[ $variables.accounts.City ]]" readonly="true" label-hint="City"
+        validators='[{"type":"length","options":{"max":"60"}}]'></oj-input-text>
+      <oj-input-text value="[[ $variables.accounts.County ]]" readonly="true" label-hint="County"
+        validators='[{"type":"length","options":{"max":"60"}}]'></oj-input-text>
+      <oj-input-text value="[[ $variables.accounts.Country ]]" readonly="true" label-hint="Country"
+        validators='[{"type":"length","options":{"max":"2"}}]'></oj-input-text>
+    </oj-form-layout>
+  </div>
+</div>
+<div class="oj-flex">
+  <oj-toolbar chroming="solid" class="oj-flex-item oj-sm-12 oj-md-12">
+    <oj-button on-oj-action="[[$listeners.backButtonClicked]]">Back</oj-button>
+  </oj-toolbar>
+</div>

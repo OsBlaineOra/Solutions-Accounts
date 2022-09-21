@@ -44,6 +44,16 @@
     }
   },
   "eventListeners": {
+    "accountsDetailButtonClicked": {
+      "chains": [
+        {
+          "chainId": "navigateToAccountsDetailChain",
+          "parameters": {
+            "accountsId": "[[ $variables.oj_table_1606100036_1SelectedId ]]"
+          }
+        }
+      ]
+    },
     "editAccountsButtonClicked": {
       "chains": [
         {

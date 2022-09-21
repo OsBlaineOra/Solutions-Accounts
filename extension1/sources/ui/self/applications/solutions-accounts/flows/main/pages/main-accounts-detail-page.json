@@ -1,0 +1,71 @@
+{
+  "title": "accounts Detail",
+  "description": "Displays accounts record",
+  "variables": {
+    "accounts": {
+      "type": "page:getAccountsResponse"
+    },
+    "accountsId": {
+      "type": "string",
+      "required": true,
+      "input": "fromUrl"
+    }
+  },
+  "metadata": {},
+  "types": {
+    "@decorators.getAccountsResponse": {
+      "endpoint": "get_accounts",
+      "service": "site_SolutionsAccounts:crmRest",
+      "path": "request"
+    },
+    "getAccountsResponse": {
+      "AddressLine1": "string",
+      "AddressLine2": "string",
+      "AddressLine3": "string",
+      "AddressLine4": "string",
+      "CEOName": "string",
+      "City": "string",
+      "Country": "string",
+      "County": "string",
+      "OrganizationName": "string",
+      "OwnerName": "string"
+    }
+  },
+  "eventListeners": {
+    "backButtonClicked": {
+      "chains": [
+        {
+          "chainId": "goBackChain"
+        }
+      ]
+    },
+    "vbEnter": {
+      "chains": [
+        {
+          "chainId": "loadAccountsChain"
+        }
+      ]
+    }
+  },
+  "imports": {
+    "components": {
+      "oj-button": {
+        "path": "ojs/ojbutton"
+      },
+      "oj-form-layout": {
+        "path": "ojs/ojformlayout"
+      },
+      "oj-input-text": {
+        "path": "ojs/ojinputtext"
+      },
+      "oj-toolbar": {
+        "path": "ojs/ojtoolbar"
+      }
+    },
+    "modules": {
+      "ojValidationBase": {
+        "path": "ojs/ojvalidation-base"
+      }
+    }
+  }
+}
