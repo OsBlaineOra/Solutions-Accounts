@@ -1,0 +1,15 @@
+{
+  "id": "solutions-accounts",
+  "urlId": "Solutions-Accounts",
+  "description": "An App UI",
+  "defaultFlow": "main",
+  "events": {},
+  "types": {},
+  "variables": {},
+  "eventListeners": {},
+  "unifiedAppSettings": {
+    "displayName": "solutions-accounts",
+    "menuDisplayName": "solutions-accounts"
+  },
+  "security": {}
+}
