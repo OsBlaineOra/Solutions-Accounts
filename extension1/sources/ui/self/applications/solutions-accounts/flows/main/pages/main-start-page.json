@@ -2,12 +2,43 @@
   "title": "",
   "description": "",
   "variables": {
+    "accountsListSDP": {
+      "type": "vb/ServiceDataProvider",
+      "defaultValue": {
+        "endpoint": "site_SolutionsAccounts:crmRest/getall_accounts",
+        "keyAttributes": "PartyNumber",
+        "itemsPath": "items",
+        "responseType": "getallAccountsResponse",
+        "filterCriterion": {
+          "op": "$co",
+          "attribute": "OrganizationName",
+          "value": "{{ $variables.searchString }}"
+        }
+      }
+    },
     "searchString": {
       "type": "string"
     }
   },
   "metadata": {},
-  "types": {},
+  "types": {
+    "@decorators.getallAccountsResponse": {
+      "endpoint": "getall_accounts",
+      "service": "site_SolutionsAccounts:crmRest",
+      "path": "response"
+    },
+    "getallAccountsResponse": {
+      "items": [
+        {
+          "CEOName": "string",
+          "CurrentFiscalYearPotentialRevenueAmount": "string",
+          "NextFiscalYearPotentialRevenueAmount": "string",
+          "OrganizationName": "string",
+          "PartyNumber": "string"
+        }
+      ]
+    }
+  },
   "eventListeners": {},
   "imports": {
     "components": {
@@ -19,6 +50,9 @@
       },
       "oj-sp-welcome-page": {
         "path": "oj-sp/welcome-page/loader"
+      },
+      "oj-table": {
+        "path": "ojs/ojtable"
       }
     }
   }
