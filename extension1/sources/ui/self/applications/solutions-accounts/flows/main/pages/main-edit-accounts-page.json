@@ -51,6 +51,13 @@
         }
       ]
     },
+    "simpleCreateAndEditPageTemplateSpCancel": {
+      "chains": [
+        {
+          "chainId": "SimpleCreateAndEditPageTemplateSpCancelChain"
+        }
+      ]
+    },
     "simpleCreateAndEditPageTemplateSpPrimaryAction": {
       "chains": [
         {
