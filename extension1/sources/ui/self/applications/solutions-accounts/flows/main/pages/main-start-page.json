@@ -54,6 +54,18 @@
         }
       ]
     },
+    "buttonAction": {
+      "chains": [
+        {
+          "chainId": "ButtonActionChain",
+          "parameters": {
+            "key": "{{ $current.key }}",
+            "index": "{{ $current.index }}",
+            "current": "{{ $current }}"
+          }
+        }
+      ]
+    },
     "editAccountsButtonClicked": {
       "chains": [
         {
