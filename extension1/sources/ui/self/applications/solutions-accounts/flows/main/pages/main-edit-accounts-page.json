@@ -1,0 +1,86 @@
+{
+  "title": "Edit accounts",
+  "description": "Updates single accounts record",
+  "variables": {
+    "accounts": {
+      "type": "page:getAccountsResponse"
+    },
+    "accountsETag": {
+      "type": "string"
+    },
+    "accountsId": {
+      "type": "string",
+      "required": true,
+      "input": "fromUrl"
+    },
+    "saveAccountsChainInProgress": {
+      "type": "boolean",
+      "defaultValue": false
+    }
+  },
+  "metadata": {},
+  "types": {
+    "@decorators.getAccountsResponse": {
+      "endpoint": "get_accounts",
+      "service": "site_SolutionsAccounts:crmRest",
+      "path": "response"
+    },
+    "genericServiceErrorResponseType": {
+      "body": "any",
+      "status": "number"
+    },
+    "getAccountsResponse": {
+      "CEOName": "string",
+      "CurrentFiscalYearPotentialRevenueAmount": "string",
+      "NextFiscalYearPotentialRevenueAmount": "string",
+      "OrganizationName": "string"
+    }
+  },
+  "eventListeners": {
+    "backButtonClicked": {
+      "chains": [
+        {
+          "chainId": "goBackChain"
+        }
+      ]
+    },
+    "saveButtonClicked": {
+      "chains": [
+        {
+          "chainId": "saveAccountsChain"
+        }
+      ]
+    },
+    "vbEnter": {
+      "chains": [
+        {
+          "chainId": "loadAccountsChain"
+        }
+      ]
+    }
+  },
+  "imports": {
+    "components": {
+      "oj-button": {
+        "path": "ojs/ojbutton"
+      },
+      "oj-form-layout": {
+        "path": "ojs/ojformlayout"
+      },
+      "oj-input-text": {
+        "path": "ojs/ojinputtext"
+      },
+      "oj-toolbar": {
+        "path": "ojs/ojtoolbar"
+      },
+      "oj-validation-group": {
+        "path": "ojs/ojvalidationgroup"
+      }
+    },
+    "modules": {
+      "ojValidationBase": {
+        "path": "ojs/ojvalidation-base"
+      }
+    }
+  }
+}

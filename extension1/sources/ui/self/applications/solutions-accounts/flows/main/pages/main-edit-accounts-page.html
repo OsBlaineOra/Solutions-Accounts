@@ -1,0 +1,22 @@
+<div class="oj-flex">
+  <h1 class="oj-flex-item oj-sm-12 oj-md-12">Edit accounts</h1>
+</div>
+<div class="oj-flex">
+  <oj-validation-group id="validation-group" class="oj-flex-item oj-sm-12 oj-md-12">
+    <oj-form-layout class="oj-formlayout-full-width" label-edge="start">
+      <oj-input-text value="{{ $variables.accounts.OrganizationName }}" label-hint="Organization Name"
+        validators='[{"type":"length","options":{"max":"360"}}]'></oj-input-text>
+      <oj-input-text value="{{ $variables.accounts.CEOName }}" label-hint="Chief Executive Name"
+        validators='[{"type":"length","options":{"max":"240"}}]'></oj-input-text>
+      <oj-input-text value="{{ $variables.accounts.CurrentFiscalYearPotentialRevenueAmount }}" label-hint="Revenue"></oj-input-text>
+      <oj-input-text value="{{ $variables.accounts.NextFiscalYearPotentialRevenueAmount }}"
+        label-hint="Next Fiscal Year's Potential Revenue"></oj-input-text>
+    </oj-form-layout>
+  </oj-validation-group>
+</div>
+<div class="oj-flex">
+  <oj-toolbar chroming="solid" class="oj-flex-item oj-sm-12 oj-md-12">
+    <oj-button on-oj-action="[[$listeners.backButtonClicked]]">Cancel</oj-button>
+    <oj-button on-oj-action="[[$listeners.saveButtonClicked]]" disabled="[[ $variables.saveAccountsChainInProgress ]]">Save</oj-button>
+  </oj-toolbar>
+</div>

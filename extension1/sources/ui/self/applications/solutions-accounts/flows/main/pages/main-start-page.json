@@ -16,6 +16,10 @@
         }
       }
     },
+    "oj_table_1606100036_1SelectedId": {
+      "type": "string",
+      "defaultValue": ""
+    },
     "searchString": {
       "type": "string"
     }
@@ -39,9 +43,33 @@
       ]
     }
   },
-  "eventListeners": {},
+  "eventListeners": {
+    "editAccountsButtonClicked": {
+      "chains": [
+        {
+          "chainId": "navigateToEditAccountsChain",
+          "parameters": {
+            "accountsId": "[[ $variables.oj_table_1606100036_1SelectedId ]]"
+          }
+        }
+      ]
+    },
+    "oj_table_1606100036_1SelectionChanged": {
+      "chains": [
+        {
+          "chainId": "oj_table_1606100036_1ChangeSelectionChain",
+          "parameters": {
+            "accountsId": "[[ $event.detail.value.key || '' ]]"
+          }
+        }
+      ]
+    }
+  },
   "imports": {
     "components": {
+      "oj-button": {
+        "path": "ojs/ojbutton"
+      },
       "oj-input-search": {
         "path": "ojs/ojinputsearch"
       },
@@ -53,6 +81,9 @@
       },
       "oj-table": {
         "path": "ojs/ojtable"
+      },
+      "oj-toolbar": {
+        "path": "ojs/ojtoolbar"
       }
     }
   }
