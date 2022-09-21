@@ -70,6 +70,9 @@
       "oj-input-text": {
         "path": "ojs/ojinputtext"
       },
+      "oj-sp-simple-create-edit": {
+        "path": "oj-sp/simple-create-edit/loader"
+      },
       "oj-toolbar": {
         "path": "ojs/ojtoolbar"
       },
