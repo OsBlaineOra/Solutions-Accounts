@@ -1,4 +1,39 @@
 <div class="oj-flex">
+  <div class="oj-flex-item oj-sm-12 oj-md-12">
+    <oj-sp-foldout-layout id="foldout_layout_Horizontal_page" animate="[[$page.variables.animate]]"
+      previous-step="[[$variables.previousStep]]" next-step="[[$variables.nextStep]]"
+      display-options.go-to-parent="[[$page.variables.goToParent]]"
+      display-options.bidirectional-navigation="[[$page.variables.bidirectionalNavigation]]"
+      on-sp-go-to-parent="[[$listeners.onSpGoToParent]]" selected-panel="{{$variables.selectedPanel}}"
+      on-sp-previous="[[$listeners.onSpPrevious]]" on-sp-next="[[$listeners.onSpNext]]" orientation='horizontal'
+      display-mode="[[$page.variables.displayMode]]">
+
+    
+    <oj-sp-horizontal-overview id="foldout_layout_h_overview" slot="overview"
+      item-title="[[ $page.variables.pageTitle ]]" display-mode="[[$page.variables.displayMode]]"></oj-sp-horizontal-overview>
+    
+    <!-- the below is default slot, maximun 6 oj-sp-foldout-panel could be added -->
+    <oj-sp-foldout-panel panel-title="[[ $page.variables.panelOneTitle]]" class="profile-panel">
+      <!-- below div is default slot for the content of the first foldout panel -->
+      <div></div>
+      <!-- Summary Slot: Summary Section of the second foldout panel -->
+      <div slot="summary"></div>
+    </oj-sp-foldout-panel>
+
+    
+    <oj-sp-foldout-panel panel-title="[[ $page.variables.panelTwoTitle]]" class="profile-panel">
+      <!-- below div is default slot for the content of the first foldout panel -->
+      <div></div>
+      <!-- Summary Slot: Summary Section of the second foldout panel -->
+      <div slot="summary"></div>
+    </oj-sp-foldout-panel>
+
+    
+    <oj-vb-content slot="drilldown" config="[[vbRouterFlow]]"></oj-vb-content>
+    </oj-sp-foldout-layout>
+  </div>
+</div>
+<div class="oj-flex">
   <h1 class="oj-flex-item oj-sm-12 oj-md-12">accounts Detail</h1>
 </div>
 <div class="oj-flex">
