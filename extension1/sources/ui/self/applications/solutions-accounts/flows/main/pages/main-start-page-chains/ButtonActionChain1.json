@@ -1,0 +1,32 @@
+{
+  "description": "",
+  "root": "callChainNavigateToAccountsDetailChain",
+  "actions": {
+    "callChainNavigateToAccountsDetailChain": {
+      "module": "vb/action/builtin/callChainAction",
+      "parameters": {
+        "id": "navigateToAccountsDetailChain",
+        "params": {
+          "accountsId": "{{ $variables.key }}"
+        }
+      }
+    }
+  },
+  "variables": {
+    "key": {
+      "required": true,
+      "type": "any",
+      "input": "fromCaller"
+    },
+    "index": {
+      "required": true,
+      "type": "number",
+      "input": "fromCaller"
+    },
+    "current": {
+      "required": true,
+      "type": "any",
+      "input": "fromCaller"
+    }
+  }
+}
