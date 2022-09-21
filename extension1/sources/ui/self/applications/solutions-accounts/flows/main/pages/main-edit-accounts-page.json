@@ -61,9 +61,6 @@
   },
   "imports": {
     "components": {
-      "oj-button": {
-        "path": "ojs/ojbutton"
-      },
       "oj-form-layout": {
         "path": "ojs/ojformlayout"
       },
@@ -72,9 +69,6 @@
       },
       "oj-sp-simple-create-edit": {
         "path": "oj-sp/simple-create-edit/loader"
-      },
-      "oj-toolbar": {
-        "path": "ojs/ojtoolbar"
       },
       "oj-validation-group": {
         "path": "ojs/ojvalidationgroup"
