@@ -5,7 +5,10 @@
     "callChainNavigateToEditAccountsChain": {
       "module": "vb/action/builtin/callChainAction",
       "parameters": {
-        "id": "navigateToEditAccountsChain"
+        "id": "navigateToEditAccountsChain",
+        "params": {
+          "accountsId": "{{ $variables.key }}"
+        }
       }
     }
   },
