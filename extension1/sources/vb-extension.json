@@ -1,0 +1,12 @@
+{
+    "features": {
+        "extensionEnabled": true
+    },
+    "extensionFrameworkVersion": "2.0.0",
+    "id": "site_SolutionsAccounts",
+    "source.version": "2207",
+    "name": "Solutions-Accounts",
+    "description": "",
+    "version": "0.1",
+    "frameworkVersion": "1.0.0"
+}
