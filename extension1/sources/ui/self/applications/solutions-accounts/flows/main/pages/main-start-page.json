@@ -7,6 +7,9 @@
   "eventListeners": {},
   "imports": {
     "components": {
+      "oj-input-search": {
+        "path": "ojs/ojinputsearch"
+      },
       "oj-sp-welcome-page": {
         "path": "oj-sp/welcome-page/loader"
       }
