@@ -4,7 +4,7 @@
     illustration-foreground="https://static.oracle.com/cdn/fnd/gallery/2107.1.0/images/illust-welcome-banner-fg-03.png">
     <oj-input-search slot="search" value="{{ $variables.searchString }}"></oj-input-search>
     <oj-sp-collection-container>
-      <oj-table scroll-policy="loadMoreOnScroll" data="[[$variables.accountsListSDP]]"
+      <oj-table scroll-policy-options.scroller="html" scroll-policy="loadMoreOnScroll" data="[[$variables.accountsListSDP]]"
         columns='[{"headerText":"Organization Name","field":"OrganizationName","sortable":"disabled"},{"headerText":"Chief Executive Name","field":"CEOName","sortable":"disabled"},{"headerText":"Revenue","field":"CurrentFiscalYearPotentialRevenueAmount","sortable":"disabled"},{"headerText":"Next Fiscal Year&apos;s Potential Revenue","field":"NextFiscalYearPotentialRevenueAmount","sortable":"disabled"}]'></oj-table>
     </oj-sp-collection-container>
   </oj-sp-welcome-page>
