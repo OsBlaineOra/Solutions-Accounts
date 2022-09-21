@@ -16,7 +16,7 @@
     },
     "bidirectionalNavigation": {
       "type": "boolean",
-      "defaultValue": true,
+      "defaultValue": false,
       "input": "fromCaller"
     },
     "displayMode": {
@@ -24,7 +24,7 @@
     },
     "goToParent": {
       "type": "boolean",
-      "defaultValue": true,
+      "defaultValue": false,
       "input": "fromCaller"
     },
     "nextStep": {
@@ -33,15 +33,15 @@
     },
     "pageTitle": {
       "type": "string",
-      "defaultValue": "Horizontal Overview Title"
+      "defaultValue": "Account Info"
     },
     "panelOneTitle": {
       "type": "string",
-      "defaultValue": "Panel One Title"
+      "defaultValue": "Company"
     },
     "panelTwoTitle": {
       "type": "string",
-      "defaultValue": "Panel Two Title"
+      "defaultValue": "Address"
     },
     "parentPage": {
       "type": "string",
