@@ -1,6 +1,7 @@
 <div class="oj-flex">
   <oj-sp-simple-create-edit class="oj-flex-item oj-sm-12 oj-md-12" page-title="Edit Account"
-    page-subtitle="Add missing information" display-mode="mixed" primary-action.label="Save">
+    page-subtitle="Add missing information" display-mode="mixed" primary-action.label="Save"
+    on-sp-primary-action="[[$listeners.simpleCreateAndEditPageTemplateSpPrimaryAction]]">
     <div class="oj-flex" slot="main">
       <oj-validation-group id="validation-group" class="oj-flex-item oj-sm-12 oj-md-12">
         <oj-form-layout class="oj-formlayout-full-width" label-edge="start">

@@ -51,6 +51,13 @@
         }
       ]
     },
+    "simpleCreateAndEditPageTemplateSpPrimaryAction": {
+      "chains": [
+        {
+          "chainId": "SimpleCreateAndEditPageTemplateSpPrimaryActionChain"
+        }
+      ]
+    },
     "vbEnter": {
       "chains": [
         {
